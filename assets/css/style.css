@@ -139,7 +139,10 @@ input[type='radio'] {
   margin: 4px;
 }
 
-.gender-text { font-size: 14px; }
+.gender-text {
+  margin-right: 3%;
+  font-size: 14px;
+}
 
 .textarea {
   min-height: 100px;
@@ -154,9 +157,53 @@ input[type='radio'] {
   cursor: pointer;
 }
 
+.form-group-cta { margin-top: 10px; }
 .submit-btn { background-color: rgb(40, 182, 40); }
 .cancel-btn { background-color: rgb(199, 46, 46); }
+.error { color: rgb(255, 0, 0); }
 /* form section style ends here */
+/* output section style starts here */
+.output-heading {
+  padding-top: 20px;
+  border-top: 2px solid #000;
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.table{
+  width: 100%;
+  margin: 25px 0;
+  border-collapse: collapse;
+  display: table;
+  font-size: 14px;
+  list-style: none;
+  table-layout: fixed;
+}
+
+.thead{
+  display: table-row;
+  background-color: #464646;
+  color: #fff;
+  font-weight: bold;
+  text-align: left;
+}
+
+.th,
+.td{
+  padding: 12px 15px;
+  display: table-cell;
+  align-items: center;
+}
+
+.tbody{
+  border-bottom: 1px solid #dddddd;
+  display: table-row;
+}
+
+.tbody:hover{ background-color: rgb(207, 207, 207); }
+.tbody:last-of-type{ border-bottom: 2px solid #464646; }
+/* output section style ends here */
 /*=================================
   main styling ends here
 =================================*/
