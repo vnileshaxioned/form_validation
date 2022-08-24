@@ -160,7 +160,13 @@ input[type='radio'] {
 .form-group-cta { margin-top: 10px; }
 .submit-btn { background-color: rgb(40, 182, 40); }
 .cancel-btn { background-color: rgb(199, 46, 46); }
-.error { color: rgb(255, 0, 0); }
+
+.error {
+  display: none;
+  color: rgb(255, 0, 0);
+}
+
+.error-active { display: block; }
 /* form section style ends here */
 /* output section style starts here */
 .output-heading {
