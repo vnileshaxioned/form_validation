@@ -39,21 +39,40 @@
 <body>
   <!--container start-->
   <div class="container">
-    <!--header section start-->
-    <header>
-      
-    </header>
-    <!--header section start-->
     <!--main section start-->
     <main>
-
+      <section class="form-section">
+        <div class="wrapper">
+          <form action="#FIXME" class="form" method="post">
+            <div class="form-group">
+              <label for="firsrt-name" class="label">First Name</label>
+              <input type="text" class="form-content" name="first_name" id="firsrt-name" placeholder="First Name" />
+            </div>
+            <div class="form-group">
+              <label for="last-name" class="label">First Name</label>
+              <input type="text" class="form-content" name="last_name" id="last-name" placeholder="Last Name" />
+            </div>
+            <div class="form-group">
+              <label class="label">Gender</label>
+              <input type="radio" class="form-content" name="gender" id="female" value="female" /><label for="female" class="gender-text">Female</label>
+              <input type="radio" class="form-content" name="gender" id="male" value="male" /><label for="male" class="gender-text">Male</label>
+            </div>
+            <div class="form-group">
+              <label for="phone-number" class="label">Phone Number</label>
+              <input type="text" class="form-content" name="phone_number" id="phone-number" placeholder="Phone Number" />
+            </div>
+            <div class="form-group">
+              <textarea class="form-content textarea" name="address" id="address" placeholder="Address"></textarea>
+            </div>
+            <div class="form-group form-group-cta">
+              <input type="submit" class="button submit-btn" value="Submit" />
+              <input type="reset" class="button cancel-btn" value="Cancel" />
+            </div>
+          </form>
+        </div>
+      </section>
     </main>
     <!--main section end-->
-    <!--footer section start-->
-    <footer>      
-
-    </footer>
-    <!--footer section end-->
   </div>
   <!--container end-->
 
