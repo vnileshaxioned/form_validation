@@ -48,23 +48,28 @@
             <div class="form-group">
               <label for="firsrt-name" class="label">First Name</label>
               <input type="text" class="form-content" name="first_name" id="firsrt-name" placeholder="First Name" />
+              <span class="error fname-error">error</span>
             </div>
             <div class="form-group">
               <label for="last-name" class="label">First Name</label>
               <input type="text" class="form-content" name="last_name" id="last-name" placeholder="Last Name" />
+              <span class="error lname-error">error</span>
             </div>
             <div class="form-group">
               <label class="label">Gender</label>
-              <input type="radio" class="form-content" name="gender" id="female" value="female" /><label for="female" class="gender-text">Female</label>
+              <input type="radio" class="form-content gender" name="gender" id="female" value="female" /><label for="female" class="gender-text gender">Female</label>
               <input type="radio" class="form-content" name="gender" id="male" value="male" /><label for="male" class="gender-text">Male</label>
+              <span class="error gender-error">error</span>
             </div>
             <div class="form-group">
               <label for="phone-number" class="label">Phone Number</label>
               <input type="text" class="form-content" name="phone_number" id="phone-number" placeholder="Phone Number" />
+              <span class="error phone-error">error</span>
             </div>
             <div class="form-group">
               <label for="address" class="label">Address</label>
               <textarea class="form-content textarea" name="address" id="address" placeholder="Address"></textarea>
+              <span class="error address-error">error</span>
             </div>
             <div class="form-group form-group-cta">
               <input type="submit" class="button submit-btn" value="Submit" />
