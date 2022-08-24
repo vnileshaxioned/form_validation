@@ -102,53 +102,61 @@ li {
   max-width: 1360px;
   width: 86%; 
   margin: 0 auto;
-}
-/*=================================
-  Header styling starts here
-=================================*/
-
-
-
-
-
-
-/*=================================
-  Header styling ends here
-=================================*/  
-
+} 
 /*=================================
   main styling starts here
 =================================*/
+/* form section style starts here */
+.form-section { padding: 20px 0; }
 
+.heading {
+  font-size: 28px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: capitalize;
+}
 
+.form {
+  width: 60%;
+  margin: 10px auto;
+}
 
+.label {
+  margin-top: 10px;
+  display: block;
+  font-size: 18px;
+  text-transform: capitalize;
+}
 
+.form-content {
+  width: 100%;
+  padding: 8px 4%;
+  margin: 10px 0;
+}
 
+input[type='radio'] {
+  width: fit-content;
+  margin: 4px;
+}
 
+.gender-text { font-size: 14px; }
 
+.textarea {
+  min-height: 100px;
+}
 
+.button {
+  padding: 8px 5%;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.submit-btn { background-color: rgb(40, 182, 40); }
+.cancel-btn { background-color: rgb(199, 46, 46); }
+/* form section style ends here */
 /*=================================
   main styling ends here
 =================================*/
-
-/*=================================
-  footer styling starts here
-=================================*/ 
-
-
-
-
-
-
-
- /*=================================
-  footer styling ends here
-=================================*/ 
-
-/*media query starts*/
-/*media query for 995px starts here*/
-@media only screen and (max-width: 995px) {
-
-
-
-}  
