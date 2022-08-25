@@ -7,6 +7,7 @@ var firstName = document.querySelector('#firsrt-name'),
   userInput = document.querySelectorAll('.form-content'),
   genderError = document.querySelector('.gender-error'),
   submit = document.querySelector('.submit-btn'),
+  cancel = document.querySelector('.cancel-btn'),
   userDetail = JSON.parse(localStorage.getItem('userData')),
   patternString = /^[A-Za-z]+$/,
   patternNumber = /^[6-9]\d{9}$/,
@@ -14,6 +15,8 @@ var firstName = document.querySelector('#firsrt-name'),
 
 showData();
 var arr = [];
+
+// for submit
 submit.addEventListener('click', function (e) {
   e.preventDefault();
   var errors = document.querySelectorAll('.error-active');
@@ -49,6 +52,12 @@ submit.addEventListener('click', function (e) {
   }
 });
 
+// for cancel
+cancel.addEventListener('click', function () {
+  errorRemove();
+})
+
+// for empty all field
 function empty() {
   firstName.value = '';
   lastName.value = '';
@@ -58,6 +67,7 @@ function empty() {
   address.value = '';
 }
 
+// for blur all field
 blur(firstName, patternString, 'Only characters are allowed', 8);
 blur(lastName, patternString, 'Only characters are allowed', 10);
 blur(phoneNumber, patternNumber, 'Only digits are allowed', 10, 'number');
@@ -69,6 +79,7 @@ function blur(input, pattern = '', message = '', limit = '', type = '') {
   });
 }
 
+// for show errors
 function showError(input, value, pattern = '', message = '', limit = '', type = '') {
   var element = input.parentElement.children;
   for (var i = 0; i < element.length; i++) {
@@ -110,15 +121,16 @@ function showError(input, value, pattern = '', message = '', limit = '', type = 
   }
 }
 
+// for show data
 function showData() {
   var arr = getUserData(),
     table = document.querySelector('.table-body');
   table.innerHTML = '';
-    
+
   if (arr != null) {
-  for (var i = 0; i < arr.length; i++) {
-    var li = document.createElement('li'),
-      dataElement = `<span class="td id">${i + 1}</span>`;
+    for (var i = 0; i < arr.length; i++) {
+      var li = document.createElement('li'),
+        dataElement = `<span class="td id">${i + 1}</span>`;
       dataElement += `<span class="td">${arr[i].firstName}</span>`;
       dataElement += `<span class="td">${arr[i].lastName}</span>`;
       dataElement += `<span class="td">${arr[i].gender}</span>`;
@@ -135,14 +147,15 @@ function showData() {
     }
   }
 
+  // for edit data
   var edits = document.querySelectorAll('.edit'),
-  deletes = document.querySelectorAll('.delete');
+    deletes = document.querySelectorAll('.delete');
 
   edits.forEach(function (editBtn) {
     editBtn.addEventListener('click', function (e) {
       e.preventDefault();
-      id = editBtn.getAttribute('href'),
-      arr = getUserData();
+      errorRemove();
+      (id = editBtn.getAttribute('href')), (arr = getUserData());
 
       firstName.value = arr[id].firstName;
       lastName.value = arr[id].lastName;
@@ -156,11 +169,12 @@ function showData() {
     });
   });
 
+  // for delete data
   deletes.forEach(function (deleteBtn) {
     deleteBtn.addEventListener('click', function (e) {
       e.preventDefault();
-      id = deleteBtn.getAttribute('href'),
-      arr = getUserData();
+      errorRemove();
+      (id = deleteBtn.getAttribute('href')), (arr = getUserData());
 
       arr.splice(id, 1);
       setUserData(arr);
@@ -169,11 +183,22 @@ function showData() {
   });
 }
 
+// for remove active errors
+function errorRemove() {
+  var errors = document.querySelectorAll('.error-active');
+
+  errors.forEach(function (error) {
+    error.classList.remove('error-active');
+  })
+}
+
+// for get data from localStorage
 function getUserData() {
   var arr = JSON.parse(localStorage.getItem('userData'));
   return arr;
 }
 
+// for set data to localStorage
 function setUserData(arr) {
   localStorage.setItem('userData', JSON.stringify(arr));
 }
