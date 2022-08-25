@@ -14,7 +14,7 @@ var firstName = document.querySelector('#firsrt-name'),
   id = 'no';
 
 showData();
-var arr = [];
+var arr = getUserData() ? getUserData() : [];
 
 // for submit
 submit.addEventListener('click', function (e) {
@@ -30,7 +30,6 @@ submit.addEventListener('click', function (e) {
         'address' : address.value,
       }
 
-    arr = getUserData();
     if (id == 'no') {
       arr.push(data);
     } else {
