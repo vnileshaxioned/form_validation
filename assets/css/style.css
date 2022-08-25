@@ -203,6 +203,7 @@ input[type='radio'] {
 }
 
 .id { width: 3%; }
+.table-body { display: table-row-group; }
 
 .tbody{
   border-bottom: 1px solid #dddddd;
